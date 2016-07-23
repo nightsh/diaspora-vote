@@ -23,7 +23,10 @@ module.exports = function(environment) {
     },
 
     'g-map': {
-      libraries: ['places']
+      exclude: true,
+      libraries: ['places'],
+      key: 'AIzaSyAke6PgEJri7ee9OakTxofAAXuH7VF3eLs',
+      client: '1025219867212-644cg90a3sgo1iq7tcfohg4ks0fuco13.apps.googleusercontent.com'
     },
 
     EmberENV: {
