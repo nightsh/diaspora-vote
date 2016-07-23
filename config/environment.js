@@ -6,6 +6,26 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com",
+      'font-src': "'self' fonts.gstatic.com themes.googleusercontent.com",
+      'connect-src': "'self' maps.gstatic.com",
+      'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com data:",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com assets-cdn.github.com"
+    },
+
+    'place-autocomplete': {
+      exclude: true,
+      key: 'AIzaSyAke6PgEJri7ee9OakTxofAAXuH7VF3eLs',
+      client: '1025219867212-644cg90a3sgo1iq7tcfohg4ks0fuco13.apps.googleusercontent.com'
+    },
+
+    'g-map': {
+      libraries: ['places']
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
